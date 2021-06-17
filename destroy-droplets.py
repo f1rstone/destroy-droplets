@@ -55,7 +55,7 @@ def tg_message_notice(destroy_time_left):  # Send notification about droplets to
 
         while droplets_number_dynamic > 0:  # Iterate over droplets JSON and get name and IP
             droplet_info = (str(j['droplets'][droplets_number_dynamic - 1]['name']) + ' ' + str(
-                (j['droplets'][droplets_number_dynamic - 1]['networks']['v4'][0]['ip_address'])))
+                (j['droplets'][droplets_number_dynamic - 1]['networks']['v4'][1]['ip_address'])))
             print('droplet_info:\n', droplet_info)
             droplets_list_info.append(droplet_info)
             droplets_number_dynamic = droplets_number_dynamic - 1
